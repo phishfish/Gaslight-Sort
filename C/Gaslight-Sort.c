@@ -3,6 +3,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
+#include "Gaslight-Sort.h"
 
 //11 + 1
 #define BUFFER_LENGTH 12
@@ -73,8 +74,7 @@ void insertNumbers(int* arrayOfNums, int totalInputs){
 	}
 }
 
-bool isSorted(int *array)
-{
+bool isSorted(int *array){
 	return true;
 }
 
@@ -92,5 +92,11 @@ int main(void)
 	for(int p = 0; p < numInts; ++p){
 		printf("index %d is %d\n", p, needsToBeSorted[p]);
 	}
+
+	if(isSorted(needsToBeSorted))
+		puts("This is sorted");
+	else
+		puts("This is not sorted");
+
 	return 0;
 }
