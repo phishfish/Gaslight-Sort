@@ -25,3 +25,6 @@
 
 # Ignores Python debugging files
 *.pdb
+
+# IDE stuff
+*.vscode
