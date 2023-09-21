@@ -2,4 +2,4 @@ Gaslight sort is a sorting algorithm with constant space and time complexity. Ho
 
 If you would like to contribute to Gaslight-Sort, please clone the repo, create a branch, git add ., git commit -m "Your message here", and make a pull request. 
 
-Don't forget to clean before pushing! (Because I'm too lazy to create a .gitignore lmao)
+Includes a gitignore file to prevent clutter of executables.

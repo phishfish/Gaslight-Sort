@@ -1,0 +1,27 @@
+# Ignores Object files
+*.o
+*.obj
+
+# Ignores dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Ignores static libraries
+*.a
+*.lib
+
+# Ignores executables
+*.exe
+*.out
+
+# Ignores class files 
+*.class
+
+# Ignores zipped files
+*.zip
+*.tar.gz
+*.rar
+
+# Ignores Python debugging files
+*.pdb
