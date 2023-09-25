@@ -5,8 +5,6 @@
 #include <string.h>
 #include "Gaslight-Sort.h"
 
-//11 + 1
-#define BUFFER_LENGTH 12
 //gets numbers from the user
 //if the user enters anything that isn't a sane number it reprompts input
 //if the number is larger than INT_MAX/INT_MIN it reprompts as well as if no numbers are inputted
