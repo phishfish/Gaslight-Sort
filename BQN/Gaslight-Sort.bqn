@@ -1,4 +1,4 @@
-Gsort ← {⊏𝕩∨1}
+Gsort ← {𝕩⋄1}
 
 # Examples
 Gsort 5‿2‿0‿6
