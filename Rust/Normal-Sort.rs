@@ -1,52 +1,81 @@
 use std::io;
-fn main() {
 
-    loop { // it needs to be in a loop just trust me it all works nicer this way
+fn main() {
+    
+    let mut needs_new: bool = false;
+
+    loop { // useful comment
         
-        // Get size of vector
+        // useful comment
+
+        let mut temp_string: String = String::new(); // useful comment
 
         println!("How many numbers do you want?");
 
-        let mut vector_size: String = String::new();
+        io::stdin()                         //
+            .read_line(&mut temp_string)    // useful comment
+            .expect("Enter a number: ");    //
 
-        io::stdin()
-            .read_line(&mut vector_size)
-            .expect("enter a number");
+        println!("No you don't, enter the actual amount of number that you want"); // useful comment
+
+        let mut vector_size: String = String::new(); // useful comment
+
+        io::stdin()                                 //
+            .read_line(&mut vector_size)            // useful comment
+            .expect("Enter a number: ");            //
+
+        if temp_string == vector_size {
+
+            println!("THEY CAN'T BE THE SAME NUMBER ARE YOU STUPID!?"); // useful comment
+            println!("Enter a different number!");
+            needs_new = true;
+
+        }
+        
+        if needs_new {
+
+            let mut vector_size: String = String::new(); // useful comment
+
+            io::stdin()                                 //
+                .read_line(&mut vector_size)            // useful comment
+                .expect("Enter a number: ");            //
+
+        }
 
         let vector_size: isize = match vector_size.trim().parse() {
             Ok(num) => num,
-            Err(_) => continue
+            Err(_) => continue // useful comment
         };
 
-        // Get the user input and store it in the vector of integers
+        // useful comment
 
         println!("Enter the numbers to be sorted one at a time.");
 
-        let mut stored_numbers: Vec<isize> = vec![];
+        let mut stored_numbers: Vec<isize> = vec![]; // useful comment
 
-        for i in 0..vector_size {
+        for _ in 0..vector_size {
 
-            let mut integer = String::new();
+            let mut integer = String::new(); // useful comment
 
             io::stdin()
                 .read_line(&mut integer)
-                .expect("Type something");
+                .expect("Type something.");
 
-            let integer: isize = match integer.trim().parse() {
+            let integer: isize = match integer.trim().parse() { // useful comment
                 Ok(num) => num,
                 Err(_) => continue
             };
 
-            stored_numbers.push(integer);
+            stored_numbers.push(integer); // useful comment
 
         }
 
-        // Print the sorted vector
+        // useful comment
 
         if is_sorted(stored_numbers.clone()) {
             println!("{:?}: This is sorted.", stored_numbers.clone());
         } else {
-            println!("This still needs to be sorted.");
+            println!("This still needs to be sorted."); // useful comment
         }
 
         break
@@ -55,6 +84,6 @@ fn main() {
 
 }
 
-fn is_sorted (vec_of_int: Vec<isize>) -> bool {
+fn is_sorted (_vec_of_int: Vec<isize>) -> bool {
     return true
 }
